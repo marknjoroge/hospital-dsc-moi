@@ -6,4 +6,4 @@ dsc-moi ui project
 
 task one for UI - to be completed by January
 
-![The UI to implement](../main/myFolder/image.png)
+![The UI to implement](assets/images/mark.jpeg)
