@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/people_page.dart';
+import 'package:hospital_app/view_doctors.dart';
 
 
 class IntroRoute extends StatelessWidget {
