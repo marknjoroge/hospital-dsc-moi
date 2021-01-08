@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_app/main.dart';
+import 'package:hospital_app/view_doctor.dart';
 
-import 'intro_page.dart';
+import 'main.dart';
 
 var categories = {'Surgeon', 'Urologist', 'Dentist', 'Allergist'};
 
