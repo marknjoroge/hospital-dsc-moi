@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_app/main.dart';
 
 import 'intro_page.dart';
 
@@ -58,7 +59,7 @@ class _PeopleRouteState extends State<PeopleRoute> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     SizedBox(
-                      width: 300,
+                      width: 250,
                       child: TextField(
                         decoration: InputDecoration(
                           filled: true,
@@ -69,17 +70,19 @@ class _PeopleRouteState extends State<PeopleRoute> {
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
                               width: 0.0,
-                              color: Colors.transparent,
+                              color: Colors.blue,
                             ),
                           ),
                         ),
                       ),
                     ),
                     Container(
-                      color: Colors.blue[300],
-                      child: IconButton(
-                        icon: Icon(Icons.settings_input_component_outlined),
-                        onPressed: () {},
+                      child: FlatButton(
+                        color: Colors.blue[300],
+                        child: IconButton(
+                          icon: Icon(Icons.settings_input_component_outlined),
+                          onPressed: () {},
+                        ),
                       ),
                     )
                   ],
@@ -121,7 +124,7 @@ class _PeopleRouteState extends State<PeopleRoute> {
                 doctorCard("aleki", "surgeon", 4.3),
                 doctorCard("aisha", "cardiologist", 5.0),
                 doctorCard("beat", "neurosurgeon", 4.7),
-                doctorCard("kagwe", "daktari", 4.0),
+                doctorCard("kagwe", "doktari", 4.0),
                 doctorCard("mendeley", "lab technician", 4.6),
 
               ],
@@ -130,21 +133,16 @@ class _PeopleRouteState extends State<PeopleRoute> {
         ));
   }
 
-  // List<Doctor> doctors = [
-  //   Doctor("aisha"),
-  //   Doctor("aleki"),
-  //   Doctor("beat"),
-  //   Doctor("kagwe"),
-  //   Doctor("mendeley"),
-  // ];
-
-  Widget doctorCard(doctor, category, rating) {
+  Widget doctorCard(String doctor, String category, double rating) {
+    String path = 'assets/doctors/$doctor.jpg';
     return SizedBox(
       child: InkWell(
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => IntroRoute()),
+            MaterialPageRoute(
+                builder: (context) => ThirdRoute()
+            ),
           );
         },
         child: Card(
@@ -261,14 +259,3 @@ class _PeopleRouteState extends State<PeopleRoute> {
     );
   }
 }
-
-// class Doctor {
-//   String name, category;
-//   Doctor(this.name, this.category);
-// }
-
-// class Category {
-//   String path;
-//   String category;
-//   Category({this.path, this.category});
-// }
