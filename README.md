@@ -2,6 +2,8 @@
 
 dsc-moi ui project
 
-##project description
+## project description
 
 task one for UI - to be completed by January
+
+![The UI to implement](../main/myFolder/image.png)
